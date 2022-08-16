@@ -5,7 +5,7 @@ import requests
 from common.utils import Extension
 from common.utils.utility import download_file
 
-DOWNLOAD_BASE_URL = "https://www.elitigation.sg/gd/gd/"
+DOWNLOAD_BASE_URL = "https://search2.fedcourt.gov.au"
 
 
 # def download_links(doc_id_links=[]):
