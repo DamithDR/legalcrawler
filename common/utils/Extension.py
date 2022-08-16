@@ -5,3 +5,4 @@ class Extension(Enum):
     PDF = ".pdf"
     RTF = ".rtf"
     HTML = ".html"
+    SlashPDF = "/pdf"
