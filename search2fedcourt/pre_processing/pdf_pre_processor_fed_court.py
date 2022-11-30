@@ -4,7 +4,7 @@ from os.path import isfile, join
 
 from pdf2docx import parse
 
-dir_list = ['elitigation/downloads']
+dir_list = ['search2fedcourt/downloads']
 
 for path in dir_list:
     files = [f for f in listdir(path) if isfile(join(path, f))]

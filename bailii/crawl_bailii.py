@@ -22,8 +22,8 @@ query_list = [
 ]
 
 for query in query_list:
-    # only UK cases considered at the moment
-    SEARCH_URL = "https://www.bailii.org/cgi-bin/lucy_search_1.cgi?method=boolean&query=" + query + "&mask_path=/uk/cases&datehigh=&highlight=1&sort=rank&start=0&show=1000"
+    # only UK cases-temp considered at the moment
+    SEARCH_URL = "https://www.bailii.org/cgi-bin/lucy_search_1.cgi?method=boolean&query=" + query + "&mask_path=/uk/cases-temp&datehigh=&highlight=1&sort=rank&start=0&show=1000"
 
     payload = requests.get(SEARCH_URL, allow_redirects=True, headers={"User-Agent": "Chrome/102.0.0.0"})
 
@@ -53,12 +53,12 @@ for query in query_list:
 
     # will consider seperating the documents later
     # eng_wales, scotland, ie, nie = [doc for doc in a_links_list if
-    #                               doc['href'].startswith("/cgi-bin/format.cgi?doc=/ew/cases")], \
+    #                               doc['href'].startswith("/cgi-bin/format.cgi?doc=/ew/cases-temp")], \
     #                              [doc for doc in a_links_list if
-    #                               doc['href'].startswith("/cgi-bin/format.cgi?doc=/scot/cases")], \
+    #                               doc['href'].startswith("/cgi-bin/format.cgi?doc=/scot/cases-temp")], \
     #                              [doc for doc in a_links_list if
-    #                               not doc['href'].startswith("/cgi-bin/format.cgi?doc=/ie/cases")], \
+    #                               not doc['href'].startswith("/cgi-bin/format.cgi?doc=/ie/cases-temp")], \
     #                              [doc for doc in a_links_list if
-    #                               not doc['href'].startswith("/cgi-bin/format.cgi?doc=/nie/cases")]
+    #                               not doc['href'].startswith("/cgi-bin/format.cgi?doc=/nie/cases-temp")]
 
     print("crawling job end, crawled : " + str(len(doc_id_links)) + " documents")
